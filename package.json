@@ -1,0 +1,43 @@
+{
+  "type": "module",
+  "dependencies": {
+    "core-js": "^3.15.2",
+    "get-stdin": "^9.0.0",
+    "luxon": "^2.0.1",
+    "regenerator-runtime": "^0.13.7",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/get-stdin": "^7.0.0",
+    "@types/luxon": "^1.27.1",
+    "@types/node": "^16.3.3",
+    "@types/yargs": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check --watch",
+    "build": "yarn build:types && yarn build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts\"",
+    "build:js:watch": "yarn build:js --watch",
+    "test:lint": "eslint src/ --ext .ts --color",
+    "test:lint:fix": "eslint src/ --ext .ts --color --fix"
+  },
+  "name": "watson-reporter",
+  "version": "0.0.1",
+  "description": "watson time tracking report tool",
+  "main": "lib/main.js",
+  "repository": "git@github.com:levabala/watson-reporter.git",
+  "author": "levabala <levabala@ya.ru>",
+  "license": "MIT"
+}

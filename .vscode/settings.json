@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "javascript.validate.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact"
+  ],
+  "todohighlight.keywords": [],
+  "typescript.tsdk": "node_modules/typescript/lib",
+}
